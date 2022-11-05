@@ -1,0 +1,36 @@
+/* In css precedence level is whichever styling is giving the last... id will always take precedence over general rules */
+        
+        /* element selector */
+        h1 {
+            color: red;
+            font-size: 40px;
+        }
+
+        /* id selector */
+        #second-heading {
+            color: aquamarine;
+        }
+
+        /* class selector */
+        .brown {
+            color: brown;
+        }
+
+        .royal-blue {
+            color: royalblue;
+        }
+
+        p {
+            /* font-size: 24px; */
+            
+            /* 1em means default size of element, here para is 16px by default and 2em means 2*16px = 32px */
+            /* font-size: 2em; */
+
+            font-size: 2rem; /* it is related to root element */
+        }
+
+        #red-color {
+            color: red;
+            display: inline-block; /* it has inline elements with margin and padding */
+            /* in inline elements we can't change margin top and bottom but in inline block we can */
+        }

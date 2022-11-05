@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to CSS</title>
+    <style>
+
+        /* In css precedence level is whichever styling is giving the last... id will always take precedence over general rules */
+        
+        /* element selector */
+        h1 {
+            color: red;
+            font-size: 40px;
+        }
+
+        /* id selector */
+        #second-heading {
+            color: aquamarine;
+        }
+
+        /* class selector */
+        .brown {
+            color: brown;
+        }
+
+        .royal-blue {
+            color: royalblue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inline css -->
+    <h1 style="color: aqua;">First Heading</h1>
+
+    <!-- id selector -->
+    <h1 id="second-heading">Second heading</h1>
+
+    <!-- element selector -->
+    <h1>Third heading</h1>
+
+    <!-- class selector -->
+    <!-- css is read from left to right so right most class has the greater precedence -->
+    <h1 class="brown royal-blue">Forth heading</h1>
+    
+</body>
+</html>

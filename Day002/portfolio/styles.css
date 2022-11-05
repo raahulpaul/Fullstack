@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    padding: 16px;
+}
+
+.intro {
+    background-color: #1d1c1c;
+    padding: 16px;
+    margin: -16px;
+    color: #fff;
+    text-align: center;
+}
+
+.intro img {
+    border-radius: 10px;
+    width: 300px;
+}
+
+.intro a img {
+    width: 30px;
+    margin: auto 10px;
+}
+
+.intro a {
+    text-decoration: none;
+}
+
+/* this will effect h2 which is immediate child of div which is also immediate child of class container */
+.container > div > h2 {
+    text-align: center;
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse; /* this will collapse the unused borders */
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+table {
+    width: 100%;
+}
+
+#about p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#qualification ol li {
+    font-size: 2rem;
+}
+
+#hobbies ul li {
+    font-size: 2rem;
+}
