@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Specificity & Sementic Html</title>
+    <style>
+
+        /* 2nd highest priority is id selector with specificity 100 */
+        #id-level {
+            color: palevioletred;
+        }
+
+        /* it'll get more priority than single id selector coz its specificity is 101, we added element(1) with id(100) and same for class */
+        p#id-level {
+            color: aliceblue;
+        }
+
+        /* 3rd highest priority is class selector with specificity 10 */
+        .class-level {
+            color: coral;
+        }
+
+        /* last priority is element selector with specificity 1 */
+        p {
+            color: aqua;
+        }
+
+        /* and if we wanna override everything then we use important, but always avoid it coz it can be overriden by only */
+        p {
+            color: red !important;
+        }
+
+        p::after {
+            content: "💎";
+        }
+
+        p::before {
+            content: "💎";
+        }
+
+        input::placeholder {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1st highest priority is inline css styling -->
+    <p style="color: blue;" id="id-level" class="class-level">this is para for checking Specificity of css</p>
+
+    <input type="text" placeholder="this is placeholder">
+</body>
+</html>

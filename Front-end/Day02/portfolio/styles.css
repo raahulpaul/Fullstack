@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+    --background-color: hsl(240deg, 80%, 100%);
+    --secondary-color: hsl(225, 85%, 57%);
+    --text-color: hsl(240deg 95% 8%);
+    --intro-color: hsl(0, 0%, 85%);
+    --shadow-color: hsl(225 10% 83%);
+    --shadow-color-dark: hsl(225 10% 63%);
+
+    --spacing-regular: 16px;
+    --spacing-small: calc(var(--spacing-regular)/2);
+
+    --font-size-small: 0.5rem;
+    --font-size-regular: 1rem;
+    --font-size-large: 1.5rem;
+    --font-size-xl: 2rem;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.header {
+    padding: 16px;
+    /* Sticky position is combination of static and fixed position */
+    position: sticky;
+    top: 0;
+    background: var(--background-color);
+    /* border-bottom: 4px solid; */
+    border: 1px solid;
+}
+
+section {
+    scroll-margin-top: calc(100px - (2*(var(--spacing-regular))));
+}
+
+nav a {
+    text-decoration: none;
+    color: royalblue;
+}
+
+header nav > a {
+    margin-right: 16px;
+}
+
+header nav > a:last-child {
+    margin-right: revert;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+nav a:visited {
+    color: royalblue;
+}
+
+footer {
+    padding: 16px;
+    text-align: center;
+    border-top: 4px solid;
+}
+
+.container {
+    padding: 16px;
+}
+
+.intro {
+    background-color: var(--intro-color);
+    padding: 16px;
+    margin: -16px;
+    color: #fff;
+    text-align: center;
+}
+
+.intro img {
+    border-radius: 10px;
+    width: 300px;
+}
+
+.intro a img {
+    width: 30px;
+    margin: auto 10px;
+}
+
+.intro a {
+    text-decoration: none;
+}
+
+/* this will effect h2 which is immediate child of section which is also immediate child of class container */
+.container > section > h2 {
+    text-align: center;
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse; /* this will collapse the unused borders */
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+table {
+    width: 100%;
+}
+
+#technologies .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* place-items: center; */
+    gap: var(--spacing-regular);
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    padding: var(--spacing-regular);
+    box-shadow: 3px 3px 6px 5px var(--shadow-color);
+    width: 100%;
+    border-radius: var(--spacing-regular);
+    transition: transform 0.4s ease-in, box-shadow 0.4s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 8px 9px var(--shadow-color-dark);
+    transform: translateY(calc(-1 * var(--spacing-small)));
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.card header h2 {
+    margin: 0;
+}
+
+#about p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#qualification ol li {
+    font-size: 2rem;
+}
+
+#hobbies ul li {
+    font-size: 2rem;
+}
+
+.dynamic-text-color {
+    color: royalblue;
+}
+
+
+form#contact {
+    max-width: 400px;
+    padding: 16px;
+    border: 1px solid;
+    border-radius: 16px;
+    margin: 50px auto;
+}
+
+#contact label {
+    display: block;
+    font-weight: 600;
+}
+
+#contact input, #contact textarea, #contact button {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 8px;
+}
+
+.mobile-nav, section.menu {
+    display: none;
+}
+
+@media (width < 500px) {
+    .default-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: revert;
+    }
+
+    #menu-button {
+        display: block;
+        background: var(--background-color);
+        border-radius: 8px;
+        margin-left: auto;
+        border-color: var(--text-color);
+    }
+
+    section.menu {
+        display: revert;
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background: var(--background-color);
+        transition: height 0.8s ease-in-out;
+    }
+
+    section.menu ul {
+        list-style: none;
+    }
+
+    section.menu ul > li {
+        margin-bottom: 16px;
+        font-size: 1.5rem;
+    }
+
+    section.menu nav {
+        margin-top: 48px;
+    }
+
+    #close-menu {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        background: transparent;
+        font-size: x-large;
+        border: none;
+    }
+}
+
+@media (width <= 450px) {
+    #profile-image {
+        width: 100%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: hsl(240deg, 80%, 5%);
+        --text-color: hsl(240deg 95% 100%);
+        --intro-color: hsl(0, 0%, 18%);
+    }
+}

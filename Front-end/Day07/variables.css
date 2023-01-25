@@ -1,0 +1,25 @@
+/* custom properties */
+
+:root {
+    --padding-large: 16px;
+    --padding-medium: 4px;
+    --background-color: lightgray;
+    --text-color: black;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    border: white solid;
+    padding: var(--padding-medium);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: black;
+        --text-color: white;
+    }
+}

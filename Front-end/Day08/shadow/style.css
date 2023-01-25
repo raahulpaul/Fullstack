@@ -1,0 +1,25 @@
+.card {
+    width: 300px;
+    height: 500px;
+    border: 1px solid;
+
+    /* by default shadow is outset, you can set it inset befor writing x-offset */
+    /* box-shadow: inset x-offset y-offset blur spread color */
+
+    /* we can specify multiple shadows by inserting comma */
+    box-shadow: 3px 4px 18px 10px hsl(240deg, 80%, 90%), -5px -5px 18px 10px red;
+
+    /* drop-shadow can only work in the transparent background */
+    /* filter: drop-shadow(4px 6px 10px black); */
+}
+
+.card h1 {
+    /* text-shadow doesn't have spread and inset property */
+    text-shadow: 2px 1px 2px red;
+    color: white;
+}
+
+.cards {
+    display: flex;
+    place-content: center;
+}

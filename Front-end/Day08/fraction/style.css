@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    /* fraction sorts the size in equal width or height */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    /* We can also write it as a function */
+    grid-template-columns: 200px repeat(2, 1fr 1fr);
+    grid-template-rows: 200px 40%;
+    gap: 16px;
+}
+
+.container > div {
+    background-color: lightcoral;
+}

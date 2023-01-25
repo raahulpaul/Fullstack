@@ -1,0 +1,18 @@
+.container {
+    display: grid;
+    /* auto-fit will fit the max columns and streatch it to screen resolution */
+    /* but auto-fill will not streatch to max at a point it'll stop */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    border: 1px solid;
+    /* place-content: start center; */
+    /* place-items: start end; */
+    /* writing-mode: vertical-lr; */
+
+    /* changing the behaviour from row to column first */
+    /* grid-auto-flow: column; */
+}
+
+.container > div {
+    background-color: lightcoral;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            padding: 16px;
+        }
+
+        .box {
+            background-color: royalblue;
+            width: 100px;
+            height: 300px;
+        }
+        
+        .box .second {
+            /* flex-basis: 400px;
+            flex-grow: 1; */
+            flex: 2 0 200px;
+        }
+
+        .box .third {
+            flex: 1 1 100px;
+        }
+
+        .container {
+            /* by default flex direction is row and flex wrap is no wrap */
+            display: flex;
+            height: 100vh;
+            flex-wrap: wrap;
+            /* we can use gap instead of margin in flex */
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+        }
+        /* to learn properties of flexbox visit flexbox froggy game */
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="box"></section>
+        <section class="box second"></section>
+        <section class="box third"></section>
+        <!-- <section class="box"></section>
+        <section class="box"></section>
+        <section class="box"></section> -->
+    </main>
+</body>
+</html>
